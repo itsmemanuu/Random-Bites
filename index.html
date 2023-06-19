@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Modal</title>
   <link href="style.css" rel="stylesheet">
-  <script defer src="script.js"></script>
 </head>
 <body>
   <div class="container">
-    <div class="todo-app">
+    <div class="todo-app" id="selector">
       <h2>To-Do List</h2>
       <ul id="list-container">
       </ul>
@@ -21,9 +20,22 @@
       </div>
       <hr>
       <div class="row2">
-        <button >Let's go!</button>
+        <button onclick="start()">Let's go!</button>
       </div>
     </div>
   </div>
+  <div class="wrapper" id="spinner">
+    <div class="container2">
+      <canvas id="wheel"></canvas>
+      <button id="spin-btn">Spin</button>
+      <img src="spinner-arrow-.svg" alt="spinner-arrow" />
+    </div>
+    <div id="final-value">
+      <p>Click On The Spin Button To Start</p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html> 
