@@ -12,7 +12,7 @@ function setValues(){
   let sum = 0;
   let list = getList();
   console.log(list);
-  let colors = ['#fedf30', '#fdb441', '#bf9dd3', '#29b8cd', "#00f2a6"];
+  let colors = ['#F94D61', '#fb7484'];
   degree = 360 / list.length;
   for (let i = 0; i < list.length; i++) {
     let value = list[i];
