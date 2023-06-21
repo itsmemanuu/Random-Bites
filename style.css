@@ -153,8 +153,8 @@ hr {
   border-radius: 50%;
   cursor: pointer;
   border: 0;
-  background: radial-gradient(#E2E5E6 50%, #606060 90%);
-  color: #606060;
+  background: radial-gradient(#fe5946 40%, #ed34ae 85%);
+  color: #fff;
   text-transform: uppercase;
   font-size: 1.6em;
   letter-spacing: 0.05em;

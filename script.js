@@ -12,7 +12,7 @@ function setValues(){
   let sum = 0;
   let list = getList();
   console.log(list);
-  let colors = ['#fedf30', '#fdb441', '#fd6930', '#eb5454', '#bf9dd3', '#29b8cd', "#00f2a6", "#f67"];
+  let colors = ['#fedf30', '#fdb441', '#bf9dd3', '#29b8cd', "#00f2a6"];
   degree = 360 / list.length;
   for (let i = 0; i < list.length; i++) {
     let value = list[i];
@@ -133,7 +133,7 @@ function start(){
         datalabels: {
           color: "#ffffff",
           formatter: (_, context) => context.chart.data.labels[context.dataIndex],
-          font: { size: 16, weight: 600, family: "Poppins" },
+          font: { size: 16, weight: 600, family: "Arial" },
         },
       },
     },
