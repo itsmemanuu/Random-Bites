@@ -153,12 +153,14 @@ hr {
   border-radius: 50%;
   cursor: pointer;
   border: 0;
-  background: radial-gradient(#fdcf3b 50%, #d88a40 85%);
-  color: #c66e16;
+  background: radial-gradient(#202f2f 50%, #000 85%);
+  color: #fff;
   text-transform: uppercase;
   font-size: 1.8em;
   letter-spacing: 0.1em;
   font-weight: 600;
+  justify-content: center;
+  padding: 0px;
 }
 img {
   position: absolute;
