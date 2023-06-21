@@ -6,10 +6,12 @@ const finalValue = document.getElementById("final-value");
 var rotationValues = [];
 var data = [];
 var pieColors = [];
+var myChart;
 
 function setValues(){
   let sum = 0;
   let list = getList();
+  console.log(list);
   let colors = ['#fedf30', '#fdb441', '#fd6930', '#eb5454', '#bf9dd3', '#29b8cd', "#00f2a6", "#f67"];
   degree = 360 / list.length;
   for (let i = 0; i < list.length; i++) {
@@ -26,7 +28,7 @@ function getList(){
   let list = [];
   if (j.length > 0) {
     for (let i = 0; i < j.length; i++) {
-      list.push(j[i].textContent);
+      list.push(j[i].textContent.substring(0, j[i].textContent.length - 1));
     }
   }
   return list;
@@ -38,6 +40,7 @@ function addTask() {
   }
   else{
     let li = document.createElement("li");
+    li.classList.toggle("checked");
     li.innerHTML = inputBox.value;
     listContainer.appendChild(li);
     let span = document.createElement("span");
@@ -69,24 +72,24 @@ function loadData() {
   document.getElementById("spinner").style.display = "none";
   
   let data = [
-    "One Burrito",
-    "Burger and chips",
-    "Subway",
-    "Randys",
-    "La Puerta",
-    "Mi Caserito",
-    "Kai Sushi",
-    "Poke",
-    "Hornitos",
-    "Gasolinería",
-    "La Liebre",
-    "Toninos",
-    "El toro",
-    "1001 Kebabs",
-    "Aluna Pizza",
-    "Fries",
-    "Lucille",
-    "Poke (Box)"
+    "One Burrito ",
+    "Burger and chips ",
+    "Subway ",
+    "Randys ",
+    "La Puerta ",
+    "Mi Caserito ",
+    "Kai Sushi ",
+    "Poke ",
+    "Hornitos ",
+    "Gasolinería ",
+    "La Liebre ",
+    "Toninos ",
+    "El toro ",
+    "1001 Kebabs ",
+    "Aluna Pizza ",
+    "Fries ",
+    "Lucille ",
+    "Poke (Box) "
   ]
   for (let i = 0; i < data.length; i++) {
     let li = document.createElement("li");
@@ -103,7 +106,7 @@ function start(){
   console.log(rotationValues);
   console.log(pieColors);
   console.log(data);
-  let myChart = new Chart(wheel, {
+  myChart = new Chart(wheel, {
     //Plugin for displaying text on pie chart
     plugins: [ChartDataLabels],
     //Chart Type Pie
@@ -169,6 +172,16 @@ function valueGenerator(angleValue){
     }
   }
 };
+
+function back(){
+  document.getElementById("selector").style.display = "block";
+  document.getElementById("spinner").style.display = "none";
+  rotationValues = [];
+  data = [];
+  pieColors = [];
+  myChart.destroy()
+
+}
 
 showTask();
 
