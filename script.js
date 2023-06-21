@@ -133,7 +133,7 @@ function start(){
         datalabels: {
           color: "#ffffff",
           formatter: (_, context) => context.chart.data.labels[context.dataIndex],
-          font: { size: 16 },
+          font: { size: 16, weight: 600, family: "Poppins" },
         },
       },
     },
@@ -152,7 +152,7 @@ function start(){
         count += 1;
         resultValue -= 5;
         myChart.options.rotation = 0;
-      } else if ( count > 15 && myChart.options.rotation == randomDegree) {
+      } else if (myChart.options.rotation == randomDegree) {
         valueGenerator(randomDegree);
         clearInterval(rotationInterval);
         count = 0;
